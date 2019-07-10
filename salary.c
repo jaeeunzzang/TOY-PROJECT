@@ -10,15 +10,15 @@ int mon_sal(int a)
 {
   result=a*0.045;
   total+=result;
-  printf("국민연금 금액 : %d\n",result);
+  printf("국민연금 금액 : %d원\n",result);
   
   result=a*0.0323;
   total+=result;
-  printf("건강보험 납부 후 금액 : %d\n",result);
+  printf("건강보험 금액 : %d원\n",result);
   
   result=a*0.0065;
   total+=result;
-  printf("고용보험 납부 후 금액 : %d\n",result);
+  printf("고용보험 금액 : %d원\n",result);
   
   return total;
 }
@@ -54,7 +54,7 @@ void main()
         scanf("%d",&msal);
         
         mon_sal(msal);     
-        printf("총 세금: %d\n\n",total);
+        printf("총 세금: %d원\n\n",total);
         printf("세 후 월급 : %d원\n",msal-total);
         break;
         
@@ -66,7 +66,7 @@ void main()
         printf("세 전 월급은 %d 원 입니다.\n",h_sal);
         
         mon_sal(h_sal);
-        printf("총 세금: %d\n\n",total);
+        printf("총 세금: %d원\n\n",total);
         printf("세 후 월급 : %d원\n",h_sal-total);
         break;
         
