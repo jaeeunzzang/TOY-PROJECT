@@ -1,40 +1,42 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int msal,result;
+int total=0;
 
-double mon_sal1(double a)
+int mon_sal1(int a)
 {
-  double result;
   
   result=a*0.045;
+  total+=result;
   return result;
 }
 
-double mon_sal2(double b)
+int mon_sal2(int b)
 {
-  double result;
   result=b*0.0323;
+  total+=result;
   return result;
 }
 
-double mon_sal3(double c)
+int mon_sal3(int c)
 {
-  double result;
   result=c*0.0065;
+  total+=result;
   return result;
 }
 
 
 
 
-void main()
+int main(void)
 {
-  int num,msal,hsal,;
+  int num,hsal;
   
   printf("*** 세 후 월급 계산 프로그램 ***\n\n");
   printf("1.월급으로 계산\n");
   printf("2.시급으로 계산\n");
-  printf("0.종료");
+  printf("0.종료\n\n");
   scanf("%d",&num);
     
     
@@ -44,9 +46,14 @@ void main()
         printf("세전 월급을 입력해주세요 :\n");
         scanf("%d",&msal);
         mon_sal1(msal);
-        printf("국민연금 납부 후 금액 : %.0lf",msal);
+        printf("국민연금 금액 : %d\n",result);
         mon_sal2(msal);
-        printf("건강보험 납부 후 금액 : %.0lf",msal);
+        printf("건강보험 납부 후 금액 : %d\n",result);
         mon_sal3(msal);
-        printf("고용보험 납부 후 금액 : %.0lf",msal);
+        printf("고용보험 납부 후 금액 : %d\n",result);
+        printf("총 세금: %d\n\n",total);
+        printf("세 후 월급 : %d원\n",msal-total);
+        break;
+    }
+}
         
