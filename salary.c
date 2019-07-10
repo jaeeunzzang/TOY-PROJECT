@@ -70,6 +70,9 @@ void main()
         printf("세 후 월급 : %d원\n",h_sal-total);
         break;
         
+      default:
+        printf("정확한 숫자를 입력해 주세요\n");
+        break;
     }
 }
         
