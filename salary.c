@@ -4,9 +4,9 @@
 int msal,result,hsal,day,time;
 int total=0;
 int h_sal=0;
+//전역변수 선언
 
-
-int mon_sal(int a)
+int mon_sal(int a) //월급 세금계산 함수
 {
   result=a*0.045;
   total+=result;
@@ -23,7 +23,7 @@ int mon_sal(int a)
   return total;
 }
 
-int hour_sal(int b)
+int hour_sal(int b) //시급 -> 월급 변환 함수
 {
   
   printf("이번달에 일한 일 수를 입력해주세요 :\n");
@@ -40,7 +40,7 @@ void main()
 {
   int num;
   
- while(1)
+ while(1) //종료 전 까지 반복
  {
    
   printf("*** 세 후 월급 계산 프로그램 ***\n\n");
