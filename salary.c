@@ -40,6 +40,9 @@ void main()
 {
   int num;
   
+ while(1)
+ {
+   
   printf("*** 세 후 월급 계산 프로그램 ***\n\n");
   printf("1.월급으로 계산\n");
   printf("2.시급으로 계산\n");
@@ -70,9 +73,15 @@ void main()
         printf("세 후 월급 : %d원\n",h_sal-total);
         break;
         
+      case 0:
+        printf("종료합니다.");
+        exit(0);
+        break;
+        
       default:
-        printf("정확한 숫자를 입력해 주세요\n");
+        printf("정확한 숫자를 입력해 주세요\n\n");
         break;
     }
+ }
 }
         
