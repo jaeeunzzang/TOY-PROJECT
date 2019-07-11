@@ -1,3 +1,4 @@
+//세후월급계산프로그램
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -53,6 +54,7 @@ void main()
     switch(num)
     {
       case 1:
+        printf("*** 월급으로 계산 ***\n");
         printf("세전 월급을 입력해주세요 :\n");
         scanf("%d",&msal);
         
@@ -62,6 +64,7 @@ void main()
         break;
         
       case 2:
+        printf("*** 시급으로 계산 ***\n");
         printf("시급을 입력해 주세요 : \n");
         scanf("%d",&hsal);
         
